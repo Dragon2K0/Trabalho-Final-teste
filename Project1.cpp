@@ -249,29 +249,29 @@ int main() {
 			time_t mytime;
 			mytime = time(NULL);
 			struct tm tm = *localtime(&mytime);
-			cout << "Data: " << tm.tm_mday << " / " << tm.tm_mon + 1 << " / " << tm.tm_year + 1900 << "\n";
+			cout << "Data: " << tm.tm_mday << " /" << tm.tm_mon + 1 << " /" << tm.tm_year + 1900 << "\n";
 
 			if (novoCliente.statusCadastro == 1 && novaVenda.statusPagamento == 0) {
-				cout << "Cliente: " << novoCliente.nomeCliente << " -	STATUS: ATIVO" << "\n";
+				cout << "Cliente: " << novoCliente.nomeCliente << " 		-	STATUS: ATIVO" << "\n";
 				cout << "Combustivel: " << novoProduto.nomeProduto << "	-	Quantidade: " << novaVenda.litrosAbastecidos << "\n";
 				cout << "Total a pagar: " << totalPagar << "\n\n";
 				cout << "OBS: O PROPRIO CLIENTE EFETUOU O ABASTECIMENTO." << "\n\n";
 			}
 			if (novoCliente.statusCadastro == 1 && novaVenda.statusPagamento == 1) {
-				cout << "Cliente: " << novoCliente.nomeCliente << "	-	STATUS: ATIVO" << "\n";
+				cout << "Cliente: " << novoCliente.nomeCliente << "		-	STATUS: ATIVO" << "\n";
 				cout << "Combustivel:" << novoProduto.nomeProduto << " -	Quantidade:" << novaVenda.litrosAbastecidos << "\n";
 				cout << "PAGAMENTO JA EFETUADO! " << "\n\n";
 				cout << "OBS: O PROPRIO CLIENTE EFETUOU O ABASTECIMENTO." << "\n\n";
 			}
 			if (novoCliente.statusCadastro == 0 && novaVenda.statusPagamento == 0) {
 				cout << "Cliente: " << novoCliente.nomeCliente << " -	STATUS: INATIVO" << "\n";
-				cout << "Combustivel: " << novoProduto.nomeProduto << " -	Quantidade: " << novaVenda.litrosAbastecidos << "\n";
+				cout << "Combustivel: " << novoProduto.nomeProduto << " 	-	Quantidade: " << novaVenda.litrosAbastecidos << "\n";
 				cout << "Total a pagar: " << totalPagar << "\n\n";
 				cout << "VENDA NAO AUTORIZADA. CLIENTE INATIVO. PAGAMENTO NAO EFETUADO. " << "\n\n";
 				cout << "OBS: O PROPRIO CLIENTE EFETUOU O ABASTECIMENTO." << "\n\n";
 			}
 			if (novoCliente.statusCadastro == 0 && novaVenda.statusPagamento == 1) {
-				cout << "Cliente: " << novoCliente.nomeCliente << " -	STATUS: INATIVO" << "\n";
+				cout << "Cliente: " << novoCliente.nomeCliente << " 		-	STATUS: INATIVO" << "\n";
 				cout << "Combustivel: " << novoProduto.nomeProduto << " -	Quantidade: " << novaVenda.litrosAbastecidos << "\n";
 				cout << "VENDA NAO AUTORIZADA. CLIENTE INATIVO. PAGAMENTO JA EFETUADO. " << "\n\n";
 				cout << "OBS: O PROPRIO CLIENTE EFETUOU O ABASTECIMENTO." << "\n\n";
